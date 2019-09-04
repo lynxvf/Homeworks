@@ -31,8 +31,8 @@ class Fraction:
         return Fraction(*self.reduce_frac(res_num, res_den))
 
     def reduce_frac(self, numerator, denominator):
-        g_c_d = gcd(numerator, denominator)
-        return numerator // g_c_d, denominator // g_c_d
+        greatest_denominator = gcd(numerator, denominator)
+        return numerator // greatest_denominator, denominator // greatest_denominator
 
 
 if __name__ == '__main__':
